@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <!-- Font awesome 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Custom style sheet -->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/auth.css">
+    <link rel="stylesheet" href="/public/css/survey.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Custom js -->
+</head>
+
+<body>
+
+    <% if (currentUser) { %>
+        <%- include ('layouts/authenticated_nav') %> 
+    <% } else {%>
+        <%- include ('layouts/unauthenticated_nav') %> 
+    <% } %>
+
+    <%- include ('layouts/content') %> 
+
+    <%- include ('layouts/footer') %> 
+
+    <script src="/public/js/main.js"></script>
+
+    <!-- Chartjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+    <!-- Components -->
+    <script src="/public/js/components/UserComponent.js"></script>
+    <script src="/public/js/components/SurveyComponent.js"></script>
+
+    <!-- Supporters -->
+    <script src="/public/js/supporters/Validator.js"></script>
+
+    <!-- Handlers -->
+    <script src="/public/js/handlers/AuthHandler.js"></script>
+    <script src="/public/js/handlers/SurveyEditorHandler.js"></script>
+    <script src="/public/js/handlers/SurveyAnswerSheetHandler.js"></script>
+    <script src="/public/js/handlers/ReportHandler.js"></script>
+
+</body>
+
+</html>
