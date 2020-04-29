@@ -10,7 +10,13 @@ class Report extends Model{
     dateModified;
 
     async getOwner(){
-        
+        let owner = await require('./User').find(this.ownerId);
+        return owner;
+    }
+
+    async getSurvey(){
+        let survey = await require('./Survey').find(this.surveyId);
+        return survey;
     }
 }
 

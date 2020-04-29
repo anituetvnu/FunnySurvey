@@ -8,9 +8,9 @@
         aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
 
-        <form class="form-inline ml-auto mr-5">
+        <form class="form-inline ml-auto mr-5" id="form-search-surveys" onsubmit="SurveyComponent.searchSurveys(event)">
             <div class="input-group">
-                <input type="text" class="form-control" style="width: 300px;" placeholder="Enter keyword to search">
+                <input type="text" class="form-control" id="keyword" style="width: 300px;" placeholder="Enter keyword to search">
                 <div class="input-group-append">
                     <button class="btn btn-info" type="submit">Search</button>
                 </div>
@@ -21,9 +21,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="SurveyComponent.showSurveys();return false;"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-trophy" aria-hidden="true"></i> Top Surveys</a>
-            </li>
+            <% if (currentUser.authorization == 0) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="ReportComponent.showReports(); return false;"><i class="fa fa-file" aria-hidden="true"></i> User's Report</a>
+                </li>
+            <% } %>
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="SurveyComponent.showOwnSurveys();return false;"><i class="fa fa-archive" aria-hidden="true"></i> My Surveys</a>
             </li>
