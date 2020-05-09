@@ -11,7 +11,7 @@ let db = mysql.createConnection({
     host: 'db4free.net',
     user: 'db_for_web',
     password: 'pentakill5pentakill5',
-    database: 'team_dui',
+    database: 'db_for_web',
     port: '3306'
 });
 
