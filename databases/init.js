@@ -9,8 +9,8 @@ const mysql = require('mysql2');
 //});
 let db = mysql.createConnection({
     host: 'db4free.net',
-    user: 'team_dui_admin',
-    password: '25112000',
+    user: 'db_for_web',
+    password: 'pentakill5pentakill5',
     database: 'team_dui',
     port: '3306'
 });
