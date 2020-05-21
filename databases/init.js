@@ -8,10 +8,10 @@ const mysql = require('mysql2');
 //    database: 'f0n8bhbA7T' 
 //});
 let db = mysql.createConnection({
-    host: 'db4free.net',
-    user: 'db_for_web',
-    password: 'pentakill5',
-    database: 'db_for_web',
+    host: 'databases.000webhost.com',
+    user: 'id13308528_ngovanan',
+    password: 'cri6{3Feg!TGrCI6',
+    database: 'id13308528_surveys',
     port: '3306'
 });
 
