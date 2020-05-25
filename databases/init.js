@@ -10,7 +10,7 @@ const mysql = require('mysql2');
 let db = mysql.createConnection({
     host: 'db4free.net',
     user: 'db_for_web',
-    password: '38352f18',
+    password: 'f3def6d0',
     database: 'db_for_web',
     port: '3306'
 });
